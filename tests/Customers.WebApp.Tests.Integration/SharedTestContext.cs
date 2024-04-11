@@ -38,8 +38,8 @@ public class SharedTestContext : IAsyncLifetime
         _playwright = await Playwright.CreateAsync();
         Browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
         {
-            Headless = false,
-            SlowMo = 1000
+            //Headless = false,
+            SlowMo = 250
         });
         await Task.CompletedTask;
     }
